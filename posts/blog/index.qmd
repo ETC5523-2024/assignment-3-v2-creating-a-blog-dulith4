@@ -1,0 +1,12 @@
+---
+title: "Holiday Movies.... Is it all about Christmas?"
+author: "Dulitha Perera"
+date: "2024-09-25"
+categories: [Blog]
+---
+
+This is the first post in a Quarto blog. Welcome
+
+![](christmas.jpeg)
+
+
