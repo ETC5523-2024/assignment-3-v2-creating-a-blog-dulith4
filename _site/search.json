@@ -1,10 +1,17 @@
 [
   {
-    "objectID": "posts/welcome/index.html",
-    "href": "posts/welcome/index.html",
+    "objectID": "posts/blog/index.html",
+    "href": "posts/blog/index.html",
     "title": "Holiday Movies…. Is it all about Christmas?",
     "section": "",
-    "text": "This is the first post in a Quarto blog. Welcome!"
+    "text": "How Christmas has the monopoly in holiday movies\nThe human calendar is consist of 12 months and out of this 12 one specific month, December is what everyone (almost) looks into.\nWell we are exactly 3 months away from Christmas and Mariah Carey is almost finished defrosting 😉.\nDuring the holidays people are involve i various activities and which help them to celebrate the good times and it may change from person to person.\nHoliday Movies do play a big role during this time and people are ready to go to movie theaters with their loved ones and have a great time."
+  },
+  {
+    "objectID": "posts/blog/index.html#lets-dive-into",
+    "href": "posts/blog/index.html#lets-dive-into",
+    "title": "Holiday Movies…. Is it all about Christmas?",
+    "section": "Let’s dive into",
+    "text": "Let’s dive into"
   },
   {
     "objectID": "about.html",
