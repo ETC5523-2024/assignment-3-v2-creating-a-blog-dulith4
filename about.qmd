@@ -1,13 +1,17 @@
 ---
 title: "About"
-image: profile.jpg
+image: mypic.jpg
 about:
   template: jolla
   links:
     - icon: github
       text: Github
-      href: https://github.com/etc5523-2022
+      href: https://github.com/dulith4
+    
+    - icon: instagram
+      text: Instagram
+      href: https://www.instagram.com/dulith4?igsh=ZHpmc241dzhnbHhi
 
 ---
 
-This is a blog template for the ETC5523 Communicating with Data assessment at Monash University.
+My name is Dulitha Perera who is currently studying Masters of Business Analytics at Monash University Australia. I have previously worked as an Account Analyst at KWO Printing Needs (Private) Limited for 3 years. I did my Bachelors in Bsc (Honours) in Management in Canterbury Christ-Church University in United Kingdom. 
