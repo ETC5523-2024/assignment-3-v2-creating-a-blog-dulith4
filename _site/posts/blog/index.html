@@ -150,12 +150,52 @@ ul.task-list li input[type="checkbox"] {
 
 
 <p>How Christmas has the monopoly in holiday movies</p>
-<p><img src="christmas.jpeg" class="img-fluid"> The human calendar is consist of 12 months and out of this 12 one specific month, December is what seems magical.</p>
-<p>Well we are exactly 3 months away from Christmas and Mariah Carey is almost finished defrosting 😉.</p>
-<p>During the holidays people are involve in various activities and which help them to celebrate the good times and it may change from person to person.</p>
-<p>Holiday Movies do play a big role during this time and people are ready to go to movie theaters with their loved ones and have a great time.</p>
-<section id="lets-dive-into" class="level2">
-<h2 class="anchored" data-anchor-id="lets-dive-into">Let’s dive into</h2>
+<p><img src="christmas.jpeg" class="img-fluid"></p>
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code>
+    Downloading file 1 of 2: `holiday_movies.csv`
+    Downloading file 2 of 2: `holiday_movie_genres.csv`</code></pre>
+</div>
+</div>
+<section id="problem-at-hand" class="level2">
+<h2 class="anchored" data-anchor-id="problem-at-hand">Problem at hand</h2>
+<p>The human calendar is consist of 12 months and out of this 12 one specific month, December is what seems magical. Well we are exactly 3 months away from Christmas and Mariah Carey is almost finished defrosting 😉.</p>
+<p>When it comes to holiday movies the first thing that comes into everyone mind is <strong>Christmas</strong>, although Christmas isn’t all that celebrated during the month of December, the other two holidays which celebrated during this time is Hanukkah and Kwanzaa. So does these holidays are been celebrated in the big screen? Also what the main trends which have been…… (Complete this later)</p>
+</section>
+<section id="data-to-be-identfied" class="level2">
+<h2 class="anchored" data-anchor-id="data-to-be-identfied">Data to be identfied</h2>
+<p>As for this blog post the data was retrieved from the <strong>“TidyTuesday”</strong> <a href="https://github.com/rfordatascience/tidytuesday/tree/master/data/2023/2023-12-12">Git Repository</a> which provides the Holiday movie dataset.</p>
+<section id="data-description" class="level3">
+<h3 class="anchored" data-anchor-id="data-description">Data Description</h3>
+<p>There are mainly two datasets which have been used for this analysis, which are <strong>holiday_movies.csv</strong> and <strong>holiday_movie_genre.csv</strong>. In this blog I won’t be talking about the entire two datasets but only the key factors of the two.</p>
+<p>In the holiday_movies.csv contains the movies which have been produced from 1929-2023. There are many types of movies which have been produced over the years. There are 2265 observations and 14 variables. These variables consist of the movie name, unique identifier of the title (tconst), year of the movie released, genre, movie run time and average ratings of IMDb, these are some of the key variables of the dataset.</p>
+<p>In the holiday_movie_genre.csv contains the genre of the movies. As readers you might be wondering why there is another table for movie genre when you can find it in the first table itself? The reason for it is that for analysis purpose. In movies it is common to have more than one genre and in the first table in a single row it contains more than one genre but for analysis purpose it is hard as a solution if a movie has more than one genre it has been broken into single value. In this dataset it contains 4531 observations and 2 variables which are unique identifier of the title (tconst) and genres.</p>
+</section>
+<section id="data-cleaning" class="level3">
+<h3 class="anchored" data-anchor-id="data-cleaning">Data Cleaning</h3>
+<p>The dataset used in this analysis was obtained from the TidyTuesday repository and came pre-cleaned. No additional significant cleaning was required before analysis. The data was structured in a way that facilitated direct analysis, allowing us to dive straight into understanding genre distributions, rating trends, and holiday representations.</p>
+<p>Although some cleaning was done for this analysis in the holiday_movie_genre.csv there were some genre which are not related to movies such as Music, Talk-Show, News, Reality-TV, Sport were filtered out.</p>
+<p>Also in holiday_movies.csv the variables which contains of Christmas, Hanukkah and Kwanzaa were logical factors and for analysis purpose it was converted into integer factor.</p>
+</section>
+</section>
+<section id="what-genre-defines-holiday-movies" class="level2">
+<h2 class="anchored" data-anchor-id="what-genre-defines-holiday-movies">What Genre defines Holiday Movies</h2>
+<p>When it comes to holiday movies the first thing that pop up in everyone mind is if it’s going to be family friendly. Well the trend for the past few decades was that. Let’s see how genre distribution in holiday movies, bgh</p>
+<div class="cell">
+<div class="cell-output-display">
+<div id="fig-genre-plot" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-genre-plot-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="index_files/figure-html/fig-genre-plot-1.png" class="img-fluid figure-img" width="672">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-genre-plot-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;1: Distribution of Genres in Holiday Movies
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
 
 
 </section>

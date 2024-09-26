@@ -8,14 +8,93 @@ categories: [Blog]
 How Christmas has the monopoly in holiday movies
 
 ![](christmas.jpeg)
-The human calendar is consist of 12 months and out of this 12 one specific month, December is what seems magical.
 
-Well we are exactly 3 months away from Christmas and Mariah Carey is almost finished defrosting &#128521;. 
+```{r setup, include= FALSE}
+# Global options
+knitr::opts_chunk$set(echo = FALSE, message = FALSE, warning = FALSE)
 
-During the holidays people are involve in various activities and which help them to celebrate the good times and it may change from person to person. 
+```
 
-Holiday Movies do play a big role during this time and people are ready to go to movie theaters with their loved ones and have a great time. 
 
-## Let's dive into
+```{r}
+library(tidyverse)
+library(janitor)
+```
+
+
+```{r message=FALSE, warning=FALSE}
+tuesdata <- tidytuesdayR::tt_load(2023, week = 50)
+
+holiday_movies <- tuesdata$holiday_movies
+holiday_movie_genres <- tuesdata$holiday_movie_genres
+```
+
+
+
+## Problem at hand
+
+The human calendar is consist of 12 months and out of this 12 one specific month, December is what seems magical. Well we are exactly 3 months away from Christmas and Mariah Carey is almost finished defrosting &#128521;. 
+
+When it comes to holiday movies the first thing that comes into everyone mind is **Christmas**, although Christmas isn't all that celebrated during the month of December, the other two holidays which celebrated during this time is Hanukkah and Kwanzaa. So does these holidays are been celebrated in the big screen? Also what the main trends which have been...... (Complete this later) 
+
+
+
+## Data to be identfied
+
+As for this blog post the data was retrieved from the **"TidyTuesday"** [Git Repository](https://github.com/rfordatascience/tidytuesday/tree/master/data/2023/2023-12-12) which provides the Holiday movie dataset. 
+
+### Data Description
+
+There are mainly two datasets which have been used for this analysis, which are **holiday_movies.csv** and **holiday_movie_genre.csv**. In this blog I won't be talking about the entire two datasets but only the key factors of the two.
+
+In the holiday_movies.csv contains the movies which have been produced from 1929-2023. There are many types of movies which have been produced over the years. There are 2265 observations and 14 variables. These variables consist of the movie name, unique identifier of the title (tconst), year of the movie released, genre, movie run time and average ratings of IMDb, these are some of the key variables of the dataset.
+
+In the holiday_movie_genre.csv contains the genre of the movies. As readers you might be wondering why there is another table for movie genre when you can find it in the first table itself? The reason for it is that for analysis purpose. In movies it is common to have more than one genre and in the first table in a single row it contains more than one genre but for analysis purpose it is hard as a solution if a movie has more than one genre it has been broken into single value. In this dataset it contains 4531 observations and 2 variables which are unique identifier of the title (tconst) and genres. 
+
+### Data Cleaning
+
+The dataset used in this analysis was obtained from the TidyTuesday repository and came pre-cleaned. No additional significant cleaning was required before analysis. The data was structured in a way that facilitated direct analysis, allowing us to dive straight into understanding genre distributions, rating trends, and holiday representations.
+
+Although some cleaning was done for this analysis in the holiday_movie_genre.csv there were some genre which are not related to movies such as Music, Talk-Show, News, Reality-TV, Sport were filtered out. 
+
+```{r}
+# List of genres to remove
+unwanted_genres <- c("Music", "Talk-Show", "News", "Reality-TV", "Sport")
+
+# Filter out the unwanted genres
+cleaned_holiday_movie_genre <- holiday_movie_genres %>%
+  filter(!genres %in% unwanted_genres)
+```
+
+
+Also in holiday_movies.csv the variables which contains of Christmas, Hanukkah and Kwanzaa were logical factors and for analysis purpose it was converted into integer factor.
+
+
+## What Genre defines Holiday Movies
+
+When it comes to holiday movies the first thing that pop up in everyone mind is if it's going to be family friendly. Well the trend for the past few decades was that. Let's see how genre distribution in holiday movies, bgh 
+
+```{r, fig.cap="Distribution of Genres in Holiday Movies", label="fig-genre-plot"}
+# Step 1: Remove NA values and count the frequency of each genre
+genre_counts <- cleaned_holiday_movie_genre %>%
+  filter(!is.na(genres)) %>%    # Remove rows with NA values in the 'genres' column
+  count(genres, sort = TRUE)
+
+# Step 2: Identify the top 5 most frequent genres
+top_5_genres <- genre_counts %>%
+  top_n(5, wt = n) %>%
+  pull(genres)
+
+# Step 3: Create a vertical bar plot that highlights the top 5 genres
+ggplot(genre_counts, aes(x = reorder(genres, -n), y = n, fill = genres %in% top_5_genres)) +
+  geom_bar(stat = "identity") +
+  scale_fill_manual(values = c("TRUE" = "red", "FALSE" = "darkblue")) +  # Highlight top 5 genres
+  labs(title = "Genre Involvement in Holiday Movies",
+       x = "Genres",
+       y = "Count of Movies") +
+  theme_minimal() +
+  theme(legend.position = "none",
+        axis.text.x = element_text(angle = 45, hjust = 1))
+```
 
 

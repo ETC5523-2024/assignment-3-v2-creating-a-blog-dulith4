@@ -11,6 +11,10 @@ about:
     - icon: instagram
       text: Instagram
       href: https://www.instagram.com/dulith4?igsh=ZHpmc241dzhnbHhi
+    
+    - icon: linkedin
+      text: Linkedin
+      href: https://www.linkedin.com/in/dulitha-perera-13b1a8200?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app
 
 ---
 
