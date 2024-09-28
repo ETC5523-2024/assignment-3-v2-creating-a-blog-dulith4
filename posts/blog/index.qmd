@@ -19,6 +19,7 @@ knitr::opts_chunk$set(echo = FALSE, message = FALSE, warning = FALSE)
 ```{r}
 library(tidyverse)
 library(janitor)
+library(knitr)
 ```
 
 
@@ -89,7 +90,7 @@ top_5_genres <- genre_counts %>%
 ggplot(genre_counts, aes(x = reorder(genres, -n), y = n, fill = genres %in% top_5_genres)) +
   geom_bar(stat = "identity") +
   scale_fill_manual(values = c("TRUE" = "red", "FALSE" = "darkblue")) +  # Highlight top 5 genres
-  labs(title = "Genre Involvement in Holiday Movies",
+  labs(title = "Famous Genre in Holiday Movies",
        x = "Genres",
        y = "Count of Movies") +
   theme_minimal() +
@@ -97,4 +98,45 @@ ggplot(genre_counts, aes(x = reorder(genres, -n), y = n, fill = genres %in% top_
         axis.text.x = element_text(angle = 45, hjust = 1))
 ```
 
+Well this plot just tells the same story which we have mentioned earlier, **Family Friendly** movies takeover holiday movies but still does this means other genre isn't necessary? In a business perspective it is true but does it mean it is right? 
+
+Well it is a universal truth that to have family themed movies for holidays but it doesn't mean we can't have other options. In the Gen Z the trend is slowly changing and they are more focuses on sci-fi, animation, action and comedy based movies (Parrot Analytics, 2024). Which will change the future genre demand in holiday movies.
+
+## 
+
+As I mentioned before in the month of December Christmas isn't the only holiday which is been celebrated but does the film industry see that? Let's take a look at it. 
+
+
+
+```{r}
+#| label: tbl-holiday-representation
+#| tbl-cap: "Movies Representing Different Holidays"
+
+holiday_representation <- holiday_movies %>%
+  summarise(
+    Christmas = sum(christmas, na.rm = TRUE),   
+    Hanukkah = sum(hanukkah, na.rm = TRUE),     
+    Kwanzaa = sum(kwanzaa, na.rm = TRUE),       
+    Holiday = sum(holiday, na.rm = TRUE)        
+  )
+
+
+holiday_table <- holiday_representation %>%
+  pivot_longer(cols = everything(), names_to = "Holiday Type", values_to = "Count")
+
+
+kable(holiday_table, col.names = c("Holiday Type", "Movie Count"))
+
+```
+
+Interesting facts to be seen in here, Christmas themed movies are what has taken the center stage in holiday movies and it is not looking good but can't blame anyone, Christmas is what most of the world population is looks for.
+
+The businesses has put it focus on what makes them profit and that is Christmas, whether you like it or not that's the truth (Being part Catholic I stand by my views). Even in countries where you don't get to see many people who celebrate Christmas do come together to enjoy the festivity. So my question is if a business can make Christmas into a business Icon why can't they do same for the other holidays, In business world if a certain product has a monopoly and only way to break that monopoly by introducing another competitor(s) into the mix. 
+
+If film a production companies come forward and decide to promote other holidays it will change the outcome of the @tbl-holiday-representation and gradually people will focus on other holidays as well. 
+
+
+## Reference
+
+- Parrot Analytics. (2024). Gen Z’s Film Favorites: Which Movies Are Winning Over Young Viewers? [online] Available at: https://www.parrotanalytics.com/insights/genz-film-favorites/#:~:text=Non%2Danimated%20franchise%20movies%20have [Accessed 25 Sep. 2024].
 
