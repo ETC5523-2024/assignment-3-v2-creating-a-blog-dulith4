@@ -36,9 +36,7 @@ holiday_movie_genres <- tuesdata$holiday_movie_genres
 
 The human calendar is consist of 12 months and out of this 12 one specific month, December is what seems magical. Well we are exactly 3 months away from Christmas and Mariah Carey is almost finished defrosting &#128521;. 
 
-When it comes to holiday movies the first thing that comes into everyone mind is **Christmas**, although Christmas isn't all that celebrated during the month of December, the other two holidays which celebrated during this time is Hanukkah and Kwanzaa. So does these holidays are been celebrated in the big screen? Also what the main trends which have been...... (Complete this later) 
-
-Holiday movies are often thought of as family-friendly, with Christmas taking the spotlight year after year. But is that all there is to it? This analysis looks at the distribution of genres in holiday movies and asks why other holidays, like Hanukkah and Kwanzaa, aren't getting as much attention. 
+Holiday movies are often thought of as family-friendly, with Christmas taking the spotlight year after year. But is that all there is to it? This analysis looks at the distribution of genres in holiday movies and asks whether movies for holidays can shift from Family Themed movies to more edgy, demanding genre types of movies. 
 
 We're exploring whether the film industry’s focus on Christmas is fair, and what might happen if more movies started highlighting other holidays. Could this shift change the future of holiday movies and give audiences something new to celebrate?
 
