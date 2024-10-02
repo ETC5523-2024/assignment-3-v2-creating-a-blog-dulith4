@@ -1,0 +1,58 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "ETC5523 Blog Assessment",
+    "section": "",
+    "text": "Holiday Movies…. Is it all about Christmas?\n\n\n\n\n\n\nBlog\n\n\n\n\n\n\n\n\n\nSep 25, 2024\n\n\nDulitha Perera\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "posts/blog/index.html",
+    "href": "posts/blog/index.html",
+    "title": "Holiday Movies…. Is it all about Christmas?",
+    "section": "",
+    "text": "How Christmas has the monopoly in holiday movies\nDownloading file 1 of 2: `holiday_movies.csv`\n    Downloading file 2 of 2: `holiday_movie_genres.csv`"
+  },
+  {
+    "objectID": "posts/blog/index.html#problem-at-hand",
+    "href": "posts/blog/index.html#problem-at-hand",
+    "title": "Holiday Movies…. Is it all about Christmas?",
+    "section": "Problem at hand",
+    "text": "Problem at hand\nThe human calendar is consist of 12 months and out of this 12 one specific month, December is what seems magical. Well we are exactly 3 months away from Christmas and Mariah Carey is almost finished defrosting 😉.\nHoliday movies are often thought of as family-friendly, with Christmas taking the spotlight year after year. But is that all there is to it? This analysis looks at the distribution of genres in holiday movies and asks whether movies for holidays can shift from Family Themed movies to more edgy, demanding genre types of movies.\nWe’re exploring whether the film industry’s focus on Christmas is fair, and what might happen if more movies started highlighting other holidays. Could this shift change the future of holiday movies and give audiences something new to celebrate?"
+  },
+  {
+    "objectID": "posts/blog/index.html#data-to-be-identfied",
+    "href": "posts/blog/index.html#data-to-be-identfied",
+    "title": "Holiday Movies…. Is it all about Christmas?",
+    "section": "Data to be identfied",
+    "text": "Data to be identfied\nAs for this blog post the data was retrieved from the “TidyTuesday” Git Repository which provides the Holiday movie dataset.\n\nData Description\nThere are mainly two datasets which have been used for this analysis, which are holiday_movies.csv and holiday_movie_genre.csv. In this blog I won’t be talking about the entire two datasets but only the key factors of the two.\nIn the holiday_movies.csv contains the movies which have been produced from 1929-2023. There are many types of movies which have been produced over the years. There are 2265 observations and 14 variables. These variables consist of the movie name, unique identifier of the title (tconst), year of the movie released, genre, movie run time and average ratings of IMDb, these are some of the key variables of the dataset.\nIn the holiday_movie_genre.csv contains the genre of the movies. As readers you might be wondering why there is another table for movie genre when you can find it in the first table itself? The reason for it is that for analysis purpose. In movies it is common to have more than one genre and in the first table in a single row it contains more than one genre but for analysis purpose it is hard as a solution if a movie has more than one genre it has been broken into single value. In this dataset it contains 4531 observations and 2 variables which are unique identifier of the title (tconst) and genres.\n\n\nData Cleaning\nThe dataset used in this analysis was obtained from the TidyTuesday repository and came pre-cleaned. No additional significant cleaning was required before analysis. The data was structured in a way that facilitated direct analysis, allowing us to dive straight into understanding genre distributions, rating trends, and holiday representations.\nAlthough some cleaning was done for this analysis in the holiday_movie_genre.csv there were some genre which are not related to movies such as Music, Talk-Show, News, Reality-TV, Sport were filtered out.\nAlso in holiday_movies.csv the variables which contains of Christmas, Hanukkah and Kwanzaa were logical factors and for analysis purpose it was converted into integer factor."
+  },
+  {
+    "objectID": "posts/blog/index.html#what-genre-defines-holiday-movies",
+    "href": "posts/blog/index.html#what-genre-defines-holiday-movies",
+    "title": "Holiday Movies…. Is it all about Christmas?",
+    "section": "What Genre defines Holiday Movies",
+    "text": "What Genre defines Holiday Movies\nWhen it comes to holiday movies the first thing that pop up in everyone mind is if it’s going to be family friendly. Well the trend for the past few decades was that. Let’s see how genre distribution in holiday movies,\n\n\n\n\n\n\n\n\nFigure 1: Distribution of Genres in Holiday Movies\n\n\n\n\n\nWell this Figure 1 just tells the same story which we have mentioned earlier, Family Friendly movies takeover holiday movies but still does this means other genre isn’t necessary? In a business perspective it is true but does it mean it is right?\nWell it is a universal truth that to have family themed movies for holidays but it doesn’t mean we can’t have other options. In the Gen Z the trend is slowly changing and they are more focuses on sci-fi, animation, action and comedy based movies (Parrot Analytics, 2024).\nWhich will change the future genre demand in holiday movies. For an example this year in November very interesting Holiday movie is about to be released which is a Christmas themed movie called Red One which is actually not the traditional family friendly movie but an action packed movie."
+  },
+  {
+    "objectID": "posts/blog/index.html#does-christmas-have-to-be-the-sole-proprietor-in-holiday-movies",
+    "href": "posts/blog/index.html#does-christmas-have-to-be-the-sole-proprietor-in-holiday-movies",
+    "title": "Holiday Movies…. Is it all about Christmas?",
+    "section": "Does Christmas have to be the sole proprietor in Holiday movies?? 🤔",
+    "text": "Does Christmas have to be the sole proprietor in Holiday movies?? 🤔\nAs I mentioned before in the month of December Christmas isn’t the only holiday which is been celebrated but does the film industry see that? Let’s take a look at it.\n\n\n\n\nTable 1: Movies Representing Different Holidays\n\n\n\n\n\n\nHoliday Type\nNumber of Movies\n\n\n\n\nChristmas\n1929\n\n\nHanukkah\n10\n\n\nKwanzaa\n2\n\n\nHoliday\n330\n\n\n\n\n\n\n\n\nInteresting facts to be seen in here, Christmas themed movies are what has taken the center stage in holiday movies and it is not looking good but can’t blame anyone, Christmas is what people looks forward to.\nThe businesses has put it focus on what makes them profit and that is Christmas, whether you like it or not, that’s the truth (Being part Catholic I stand by my views). Even in countries where you don’t get to see many people who celebrate Christmas do come together to enjoy the festivity. So my question is if a business can make Christmas into a business Icon why can’t they do same for the other holidays? In business world if a certain product has a monopoly and only way to break that monopoly is by introducing another competitor(s) into the mix. Which in this case Kwanzaa and Hanukkah.\nIf film a production companies come forward and decide to promote other holidays it will change the outcome of the Table 1 and gradually people will focus on other holidays as well. Especially Kwanzaa is a celebration of the African American culture which is very heartwarming and Hanukkah is celebrated by Jewish and it is regarding their redemption over the enemy. Which has a beautiful story which can convert into beautiful art."
+  },
+  {
+    "objectID": "posts/blog/index.html#reference",
+    "href": "posts/blog/index.html#reference",
+    "title": "Holiday Movies…. Is it all about Christmas?",
+    "section": "Reference",
+    "text": "Reference\n\nParrot Analytics. (2024). Gen Z’s Film Favorites: Which Movies Are Winning Over Young Viewers? [online] Available at: https://www.parrotanalytics.com/insights/genz-film-favorites/#:~:text=Non%2Danimated%20franchise%20movies%20have [Accessed 25 Sep. 2024]."
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "My name is Dulitha Perera who is currently studying Masters of Business Analytics at Monash University Australia. I have previously worked as an Account Analyst at KWO Printing Needs (Private) Limited for 3 years. I did my Bachelors in Bsc (Honours) in Management in Canterbury Christ-Church University in United Kingdom."
+  }
+]
