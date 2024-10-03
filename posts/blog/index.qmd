@@ -50,7 +50,7 @@ There are mainly two datasets which have been used for this analysis, which are 
 
 In the holiday_movies.csv contains the movies which have been produced from 1929-2023. There are many types of movies which have been produced over the years. There are 2265 observations and 14 variables. These variables consist of the movie name, unique identifier of the title (tconst), year of the movie released, genre, movie run time and average ratings of IMDb, these are some of the key variables of the dataset.
 
-In the holiday_movie_genre.csv contains the genre of the movies. As readers you might be wondering why there is another table for movie genre when you can find it in the first table itself? The reason for it is that for analysis purpose. In movies it is common to have more than one genre and in the first table in a single row it contains more than one genre but for analysis purpose it is hard as a solution if a movie has more than one genre it has been broken into single value. In this dataset it contains 4531 observations and 2 variables which are unique identifier of the title (tconst) and genres. 
+In the holiday_movie_genre.csv contains the genre of the movies. As readers you might be wondering why there is another table for movie genre when you can find it in the first table itself? The reason for it is that for analysis purpose. In movies it is common to have more than one genre and in the first table in a single row it contains more than one genre but for analysis purpose it is hard as a solution if a movie has more than one genre it has been broken into single value. This is that advantage which anyone will have from using the TidyTuesday Git Repository as it contains lot of intial cleaning of the data. In this dataset it contains 4531 observations and 2 variables which are unique identifier of the title (tconst) and genres. 
 
 ### Data Cleaning
 
@@ -141,7 +141,11 @@ If film a production companies come forward and decide to promote other holidays
 
 ## Conclusion
 
-As for the conclusion
+It's clear that Christmas dominates the holiday movie business, with family-friendly films leading the way. However, as we saw in the genre breakdown in @fig-genre-plot, there’s room for other genres and holidays to gain more attention. Movies like "Red One" suggest that the demand for action-packed or alternative holiday films are growing, especially with younger audiences.
+
+The representation of holidays like Hanukkah and Kwanzaa is almost nonexistent, as shown in @tbl-holiday-representation, which raises the question: why aren’t more movies celebrating these occasions? If the film industry began focusing on other holidays, it could open up new opportunities and bring more diversity to holiday storytelling.
+
+In short, Christmas and Family Friendly movies has held the spotlight for a long time, but it’s time to consider how other holidays and genre could enrich the holiday movie landscape. 
 
 
 ## Reference
