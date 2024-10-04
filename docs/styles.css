@@ -3,6 +3,10 @@
   background-color: #f7f9fa;
 }
 
+body {
+    background-color: #bac7d6;
+}
+
 h1.title {
   color: #0494db;
 }
@@ -10,4 +14,13 @@ h1.title {
 
 h2.anchored {
   color: #0494db;
+}
+
+
+a.quarto-xref {
+  color: #4563d9;
+}
+
+a {
+  color: #d4630d ;
 }

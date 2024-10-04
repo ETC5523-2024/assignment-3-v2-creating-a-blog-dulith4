@@ -2,7 +2,7 @@
 title: "Holiday Movies.... Is it all about Christmas?"
 author: "Dulitha Perera"
 date: "2024-09-25"
-categories: [Blog]
+categories: [Blog, Christmas, Kwanzaa, Hanukkah, Movies]
 ---
 
 How Christmas has the monopoly in holiday movies
@@ -11,7 +11,10 @@ How Christmas has the monopoly in holiday movies
 
 ```{r setup, include= FALSE}
 # Global options
-knitr::opts_chunk$set(echo = FALSE, message = FALSE, warning = FALSE)
+knitr::opts_chunk$set(echo = FALSE,
+                      error = FALSE,
+                      message = FALSE, 
+                      warning = FALSE)
 
 ```
 
@@ -23,13 +26,34 @@ library(knitr)
 ```
 
 
-```{r message=FALSE, warning=FALSE}
+```{r}
+#| message: false
+#| warning: false
+#| messages: false
+#| error: false
+#| eval: false
+
 tuesdata <- tidytuesdayR::tt_load(2023, week = 50)
 
 holiday_movies <- tuesdata$holiday_movies
 holiday_movie_genres <- tuesdata$holiday_movie_genres
+
+# Saving the data to local
+
+write_csv(holiday_movies, "data/holiday_movies.csv")
+
+write_csv(holiday_movie_genres, "data/holiday_movies_genres.csv")
+
 ```
 
+```{r}
+
+# Loading the data from local
+
+holiday_movies <- read_csv("data/holiday_movies.csv")
+holiday_movie_genres <- read_csv("data/holiday_movies_genres.csv")
+
+```
 
 
 ## Problem at hand
