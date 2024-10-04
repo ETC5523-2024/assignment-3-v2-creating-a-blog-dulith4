@@ -82,7 +82,8 @@ The dataset used in this analysis was obtained from the TidyTuesday repository a
 
 Although some cleaning was done for this analysis in the holiday_movie_genre.csv there were some genre which are not related to movies such as Music, Talk-Show, News, Reality-TV, Sport were filtered out. 
 
-```{r}
+```{r, echo=TRUE}
+
 # List of genres to remove
 unwanted_genres <- c("Music", "Talk-Show", "News", "Reality-TV", "Sport")
 

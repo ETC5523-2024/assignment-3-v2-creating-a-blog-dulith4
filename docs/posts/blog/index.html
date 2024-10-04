@@ -22,6 +22,40 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
@@ -113,6 +147,10 @@ ul.task-list li input[type="checkbox"] {
       <h1 class="title">Holiday Movies…. Is it all about Christmas?</h1>
                                 <div class="quarto-categories">
                 <div class="quarto-category">Blog</div>
+                <div class="quarto-category">Christmas</div>
+                <div class="quarto-category">Kwanzaa</div>
+                <div class="quarto-category">Hanukkah</div>
+                <div class="quarto-category">Movies</div>
               </div>
                   </div>
   </div>
@@ -170,6 +208,14 @@ ul.task-list li input[type="checkbox"] {
 <h3 class="anchored" data-anchor-id="data-cleaning">Data Cleaning</h3>
 <p>The dataset used in this analysis was obtained from the TidyTuesday repository and came pre-cleaned. No additional significant cleaning was required before analysis. The data was structured in a way that facilitated direct analysis, allowing us to dive straight into understanding genre distributions, rating trends, and holiday representations.</p>
 <p>Although some cleaning was done for this analysis in the holiday_movie_genre.csv there were some genre which are not related to movies such as Music, Talk-Show, News, Reality-TV, Sport were filtered out.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># List of genres to remove</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>unwanted_genres <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"Music"</span>, <span class="st">"Talk-Show"</span>, <span class="st">"News"</span>, <span class="st">"Reality-TV"</span>, <span class="st">"Sport"</span>)</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Filter out the unwanted genres</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>cleaned_holiday_movie_genre <span class="ot">&lt;-</span> holiday_movie_genres <span class="sc">%&gt;%</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(<span class="sc">!</span>genres <span class="sc">%in%</span> unwanted_genres)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
 <p>Also in holiday_movies.csv the variables which contains of Christmas, Hanukkah and Kwanzaa were logical factors and for analysis purpose it was converted into integer factor.</p>
 </section>
 </section>
