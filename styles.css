@@ -3,12 +3,19 @@
   background-color: #f7f9fa;
 }
 
+.quarto-title-banner {
+  background-image: url('cover.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
 body {
     background-color: #bac7d6;
 }
 
 h1.title {
-  color: #0494db;
+  color: #013080;
 }
 
 
